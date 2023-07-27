@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>B8A3 Fruit Brust</title>
+        <!-- daisyUI tailwind-->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital@1&display=swap" rel="stylesheet"/>
+        <style>
+            body {
+                font-family: "Fira Sans Condensed", sans-serif;
+                background-color: white;
+            }
+        </style>
+        <!-- fav icons -->
+        <script src="https://kit.fontawesome.com/ecd947693a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- header -->
+      <header class="px-5 md:px-10 lg:px-20">
+        <div class="bg-white lg:bg-[#F85559]  rounded-full" >
+            <div class="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+              <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
+                <ul class="flex items-center hidden space-x-8 lg:flex">
+                  <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Home</a></li>
+                  <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">About us</a></li>
+                  <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Shop</a></li>
+                  <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">All Fruits</a></li>
+                </ul>
+                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center lg:mx-auto">
+                    <!-- iamge -->
+                    <img class="w-10 h-10" src="B8A3-fruit-brust/images/logo.png" alt="">
+                    <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 lg:text-white ">Fruit Brust</span>
+                  </a>
+                  <!-- search button -->
+            
+                  <fieldset class="hidden lg:block w-full space-y-1 dark:text-gray-100">
+                    <label for="Search" class="hidden">Search</label>
+                    <div class="relative">
+                    
+                        <input type="search" name="Search" placeholder="Search here" class="w-32 py-2 pl-10 text-sm rounded-full sm:w-auto focus:outline-none bg-white text-gray-800 focus:dark:bg-gray-900 focus:dark:border-violet-400">
+                    
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                            <button type="button" title="search" class="p-1 focus:outline-none focus:ring">
+                                <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-gray-800">
+                                    <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </fieldset>
+             
+                  
+            
+                <!-- Mobile menu -->
+                <div class="ml-auto lg:hidden z-40">
+                  <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+                    <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                      <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
+                      <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+                    </svg>
+                  </button>
+                  <!-- Mobile menu dropdown  -->
+                  <!-- <div class="absolute top-0 left-0 w-full">
+                    <div class="p-5 bg-white border rounded shadow-sm">
+                      <div class="flex items-center justify-between mb-4">
+                        <div>
+                          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                            <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                              <rect x="3" y="1" width="7" height="12"></rect>
+                              <rect x="3" y="17" width="7" height="6"></rect>
+                              <rect x="14" y="1" width="7" height="6"></rect>
+                              <rect x="14" y="11" width="7" height="12"></rect>
+                            </svg>
+                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
+                          </a>
+                        </div>
+                        <div>
+                          <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                            <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                              <path
+                                fill="currentColor"
+                                d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <nav>
+                        <ul class="space-y-4">
+                          <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
+                          <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
+                          <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
+                          <li><a href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Sign in</a></li>
+                          <li>
+                            <a
+                              href="/"
+                              class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              aria-label="Sign up"
+                              title="Sign up"
+                            >
+                              Sign up
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div> -->
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      </header>
+    
+    <main
+        class="pt-5 px-5 md:px-10 lg:px-20">
+        <!-- hero section  -->
+        <section class="relative mb-0 lg:mb-32 z-0">
+            <div class="carousel w-full z-0 rounded-md lg:rounded-none rounded-md h-[250px] lg:h-[500px]">
+                <div id="slide1" class="carousel-item relative w-full  rounded-b-md">
+                    <div class="bg-[url('B8A3-fruit-brust/images/banner2.png')] bg-cover bg-center w-full">
+                        <div class="w-full h-full flex flex-col justify-center items-center space-y-5  backdrop-brightness-50">
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">
+                                Exotic tastes at your
+                            </h1>
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">doorstep</h1>
+                            <p class="text-center text-white">
+                                We supply highly quality organic products
+                            </p>
+                            <button class="text-1xl pl-7 pr-7 btn btn-error text-white">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full ">
+                    <div class="bg-[url('B8A3-fruit-brust/images/banner3.png')] bg-cover bg-center w-full">
+                        <div class="w-full h-full flex flex-col justify-center items-center space-y-5  backdrop-brightness-50">
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">
+                                Exotic tastes at your
+                            </h1>
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">doorstep</h1>
+                            <p class="text-center text-white">
+                                We supply highly quality organic products
+                            </p>
+                            <button class="text-1xl pl-7 pr-7 btn btn-error text-white">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full ">
+                    <div class="bg-[url('B8A3-fruit-brust/images/banner4.png')] bg-cover bg-center w-full">
+                        <div class="w-full h-full flex flex-col justify-center items-center space-y-5  backdrop-brightness-50">
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">
+                                Exotic tastes at your
+                            </h1>
+                            <h1 class="text-3xl lg:text-5xl text-extrabold text-white">Edoorstep</h1>
+                            <p class="text-center text-white">
+                                We supply highly quality organic products
+                            </p>
+                            <button class="text-1xl pl-7 pr-7 btn btn-error text-white">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Fruit Chart -->
+            <div class=" w-full hidden lg:block px-20  md:px-25 lg:px-50 z-40 absolute -bottom-20  ">
+                <ul class="flex flex-1 space-x-5 justify-center items-center bg-white py-5 shadow-lg rounded-md">
+                    <li>
+                        <img src="B8A3-fruit-brust/images/fruit1.png" alt="">
+                    </li>
+                    <li><img src="B8A3-fruit-brust/images/fruit2.png" alt=""></li>
+                    <li><img src="B8A3-fruit-brust/images/fruit3.png" alt=""></li>
+                    <li><img src="B8A3-fruit-brust/images/fruit4.png" alt=""></li>
+                    <li><img src="B8A3-fruit-brust/images/fruit5.png" alt=""></li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <!-- deal of the day -->
+
+        <section class=" flex flex-1 flex-col lg:flex-row justify-between py-10 lg:py-20">
+            <div>
+                <h1 class="text-lg text-center lg:text-start lg:text-4xl  font-extrabold bg-white text-black  ">Deal of the day</h1>
+                <p class="text-xs  lg:text-2xl text-center lg:text-left text-black">Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                </p>
+                <p class="text-xs lg:text-2xl text-center lg:text-left text-black">Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+
+            <div>
+               <div class="flex justify-center items-center pt-10 lg:pt-0">
+                <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                    <div class="flex flex-col text-black font-extrabold">
+                        <span class="countdown font-mono text-3xl lg:text-5xl">
+                            <span style="--value:29;"></span>
+                        </span>
+                        days
+                    </div>
+                    <div class="flex flex-col text-black font-extrabold">
+                        <span class="countdown font-mono text-3xl lg:text-5xl ">
+                            <span style="--value:15;"></span>
+                        </span>
+                        hours
+                    </div>
+                    <div class="flex flex-col text-black font-extrabold">
+                        <span class="countdown font-mono text-3xl lg:text-5xl ">
+                            <span style="--value:25;"></span>
+                        </span>
+                        min
+                    </div>
+                    <div class="flex flex-col text-black font-extrabold">
+                        <span class="countdown font-mono text-3xl lg:text-5xl">
+                            <span style="--value:8;"></span>
+                        </span>
+                        sec
+                    </div>
+                </div>
+               </div>
+            </div>
+        </section>
+
+        <!-- deal card -->
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10 md:gap-10 ">
+            <!-- apple -->
+            <div class="max-w-xs rounded-md shadow-md bg-white text-black flex flex-col border grey justify-center items-center">
+                <img src="B8A3-fruit-brust/images/fruit6.png" alt="">
+                <div class="flex flex-col p-6 space-y-3 justify-center items-center">
+
+                    <h2 class="text-3xl font-semibold tracki">12.90$ - 18.85$</h2>
+                    <p class="">Apples</p>
+
+                    <!-- icons -->
+                    <div>
+                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                        <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                        <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <!-- Modal -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="text-[#F87272]" onclick="itemOne.showModal()">Details</button>
+                    <dialog id="itemOne" class="modal modal-bottom sm:modal-middle">
+                        <form
+                            method="dialog" class="modal-box bg-white ">
+                            <!-- card body -->
+                            <div class="flex flex-col justify-center items-center">
+                                <img src="B8A3-fruit-brust/images/fruit6.png" alt="">
+                                <div class="flex flex-col justify-center items-center p-6 space-y-5">
+                                    <h2 class="text-3xl font-semibold tracki">Apples</h2>
+                                    <p class="text-gray-800 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+
+
+                                    <!-- icons -->
+                                    <div>
+                                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                        <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                        <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                        <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center gap-5">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn btn-outline btn-error ">Close</button>
+                                    <button class="btn btn-error text-white pl-2 pr-2">Buy now</button>
+                                </div>
+                            </form>
+                        </dialog>
+
+
+                    </div>
+                </div>
+                <!--orange -->
+                <div class="max-w-xs rounded-md shadow-md bg-white text-black flex flex-col border grey justify-center items-center">
+                    <img src="B8A3-fruit-brust/images/fruit7.png" alt="">
+                    <div class="flex flex-col p-6 space-y-3 justify-center items-center">
+
+                        <h2 class="text-3xl font-semibold tracki">12.90$ - 18.85$</h2>
+                        <p class="">Orange</p>
+
+                        <!-- icons -->
+                        <div>
+                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                            <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                            <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                        </div>
+
+                        <!-- details -->
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="text-[#F87272]" onclick="itemTwo.showModal()">Details</button>
+                        <dialog id="itemTwo" class="modal modal-bottom sm:modal-middle">
+                            <form
+                                method="dialog" class="modal-box bg-white ">
+                                <!-- card body -->
+                                <div class="flex flex-col justify-center items-center">
+                                    <img src="B8A3-fruit-brust/images/fruit7.png" alt="">
+                                    <div class="flex flex-col justify-center items-center p-6 space-y-5">
+                                        <h2 class="text-3xl font-semibold tracki">Orange</h2>
+                                        <p class="text-gray-800 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+
+
+                                        <!-- icons -->
+                                        <div>
+                                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                            <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                            <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                            <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center justify-center gap-5">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn btn-outline btn-error ">Close</button>
+                                        <button class="btn btn-error text-white pl-2 pr-2">Buy now</button>
+                                    </div>
+                                </form>
+                            </dialog>
+
+
+                        </div>
+                    </div>
+                    <!-- dragon -->
+                    <div class="max-w-xs rounded-md shadow-md bg-white text-black flex flex-col border grey justify-center items-center">
+                        <img src="B8A3-fruit-brust/images/fruit8.png" alt="">
+                        <div class="flex flex-col p-6 space-y-3 justify-center items-center">
+
+                            <h2 class="text-3xl font-semibold tracki">12.90$ - 18.85$</h2>
+                            <p class="">Red Dragon</p>
+
+                            <!-- icons -->
+                            <div>
+                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                            </div>
+
+                            <!-- details -->
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="text-[#F87272]" onclick="itemThree.showModal()">Details</button>
+                            <dialog id="itemThree" class="modal modal-bottom sm:modal-middle">
+                                <form
+                                    method="dialog" class="modal-box bg-white ">
+                                    <!-- card body -->
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img src="B8A3-fruit-brust/images/fruit8.png" alt="">
+                                        <div class="flex flex-col justify-center items-center p-6 space-y-5">
+                                            <h2 class="text-3xl font-semibold tracki">Red Dragon</h2>
+                                            <p class="text-gray-800 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+
+
+                                            <!-- icons -->
+                                            <div>
+                                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-center justify-center gap-5">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn btn-outline btn-error ">Close</button>
+                                            <button class="btn btn-error text-white pl-2 pr-2">Buy now</button>
+                                        </div>
+                                    </form>
+                                </dialog>
+
+
+                            </div>
+                        </div>
+                        <!-- banana -->
+                        <div class="max-w-xs rounded-md shadow-md bg-white text-black flex flex-col border grey justify-center items-center">
+                            <img src="B8A3-fruit-brust/images/fruit9.png" alt="">
+                            <div class="flex flex-col p-6 space-y-3 justify-center items-center">
+
+                                <h2 class="text-3xl font-semibold tracki">12.90$ - 18.85$</h2>
+                                <p class="">Banana</p>
+
+                                <!-- icons -->
+                                <div>
+                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                    <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                    <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                                </div>
+
+                                <!-- details -->
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="text-[#F87272]" onclick="itemFour.showModal()">Details</button>
+                                <dialog id="itemFour" class="modal modal-bottom sm:modal-middle">
+                                    <form
+                                        method="dialog" class="modal-box bg-white ">
+                                        <!-- card body -->
+                                        <div class="flex flex-col justify-center items-center">
+                                            <img src="B8A3-fruit-brust/images/fruit9.png" alt="">
+                                            <div class="flex flex-col justify-center items-center p-6 space-y-5">
+                                                <h2 class="text-3xl font-semibold tracki">Banana</h2>
+                                                <p class="text-gray-800 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+
+
+                                                <!-- icons -->
+                                                <div>
+                                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                    <i class=" text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                    <i class="text-2xl text-[#F87272] fa-solid fa-star"></i>
+                                                    <i class="text-2xl text-[#F87272] fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="flex items-center justify-center gap-5">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn btn-outline btn-error ">Close</button>
+                                                <button class="btn btn-error text-white pl-2 pr-2">Buy now</button>
+                                            </div>
+                                        </form>
+                                    </dialog>
+
+
+                                </div>
+                            </div>
+
+
+                        </section>
+
+                        <!-- team section -->
+                        <section class="bg-[url('B8A3-fruit-brust/images/team.png')] bg-cover bg-center w-full">
+                            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:min-w-screen-xl lg:py-20 backdrop-brightness-75">
+
+                                <div
+                                    class="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
+                                    <!-- 1 -->
+                                    <div class="flex flex-col justify-center items-center space-y-4">
+                                        <div class="relative">
+                                            <img class="h-32 w-32" src="B8A3-fruit-brust/images/member1.png" alt="Person"/>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center  sm:text-center">
+                                            <p class="text-2xl font-bold text-white ">Awlad Hossein</p>
+                                            <p class="mb-5 text-lg text-white">Fruit Expart</p>
+                                            <div class="flex items-center space-x-3 sm:justify-center">
+                                                <a href="/" class="text-[#ca1b1b] transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-facebook"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class="text-xl fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="flex flex-col justify-center items-center space-y-4">
+                                        <div class="relative">
+                                            <img class="h-32 w-32" src="B8A3-fruit-brust/images/member2.png" alt="Person"/>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center  sm:text-center">
+                                            <p class="text-2xl font-bold text-white ">Safia Chowdhury</p>
+                                            <p class="mb-5 text-lg text-white">Fruit Expart</p>
+                                            <div class="flex items-center space-x-3 sm:justify-center">
+                                                <a href="/" class="text-[#ca1b1b] transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-facebook"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class="text-xl fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="flex flex-col justify-center items-center space-y-4">
+                                        <div class="relative">
+                                            <img class="h-32 w-32" src="B8A3-fruit-brust/images/member3.png" alt="Person"/>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center  sm:text-center">
+                                            <p class="text-2xl font-bold text-white ">Rakib Hossein</p>
+                                            <p class="mb-5 text-lg text-white">Fruit Expart</p>
+                                            <div class="flex items-center space-x-3 sm:justify-center">
+                                                <a href="/" class="text-[#ca1b1b] transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-facebook"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class="text-xl fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="flex flex-col justify-center items-center space-y-4">
+                                        <div class="relative">
+                                            <img class="h-32 w-32" src="B8A3-fruit-brust/images/member4.png" alt="Person"/>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center  sm:text-center">
+                                            <p class="text-2xl font-bold text-white ">Chaity</p>
+                                            <p class="mb-5 text-lg text-white">Fruit Expart</p>
+                                            <div class="flex items-center space-x-3 sm:justify-center">
+                                                <a href="/" class="text-[#ca1b1b] transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-facebook"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class="text-xl fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="/" class="text-[#ca1b1b]  transition-colors duration-300">
+                                                    <i class=" text-xl fa-brands fa-linkedin"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- why choose us -->
+
+                        <section class="px-5  bg-white dark:text-gray-100 py-10 lg:py-20">
+                            <div
+                                class="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
+                                <!-- 1 -->
+                                <div class="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-3">
+                                    <div class="flex flex-col   space-y-8 md:space-y-12">
+                                        <div class="flex flex-col  space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">Dedicated Team</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                        <div class="flex flex-col space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">Fresh is best</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                        <div class="flex flex-col space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">Gift Certificates</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- 2 -->
+                                <div class="relative flex col-span-12 bg-center bg-no-repeat bg-cover dark:bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96" style="background-image: url('/B8A3-fruit-brust/images/whychoose1.png');"></div>
+                                <!-- 3 -->
+                                <div class="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-3">
+                                    <div class="flex flex-col   space-y-8 md:space-y-12">
+                                        <div class="flex flex-col  space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">Integrated Supplier</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                        <div class="flex flex-col space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">Sustainable Practice</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                        <div class="flex flex-col space-y-2">
+                                            <h3 class="flex items-center space-x-2 dark:text-gray-400">
+                                                <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                                                <span class="text-xs lg:text-2xl font-bold tracki text-gray-800">The Benefits Only</span>
+                                            </h3>
+                                            <a rel="noopener noreferrer" href="#" class="font-serif hover:underline text-gray-800">Professional employees are there for you to pick the most amazing and fresh fruits.</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </main>
+                </body>
+                <!-- footer -->
+                <footer class="bg-black">
+                    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+                      <div class="flex justify-center items-center text-teal-600">
+                       
+                
+                    <img src="B8A3-fruit-brust/images/logo.png" alt="">
+                    <p class="text-2xl lg:text-4xl text-white font-bold">Fruit Brust</p>
+                  </div>
+                      
+                  
+                      <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                          Home
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                          About Us
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                           Shop
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                            All Fruits
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                          Support
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a class="text-white text-xs lg:text-2xl font-semibold" href="/">
+                            My Account
+                          </a>
+                        </li>
+                      </ul>
+                  
+                      <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+                        <li>
+                          <a
+                            href="/"
+                            rel="noreferrer"
+                            target="_blank"
+                            class="text-gray-700 transition hover:text-gray-700/75"
+                          >
+                            <span class="sr-only">Facebook</span>
+                            <svg
+                              class="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a
+                            href="/"
+                            rel="noreferrer"
+                            target="_blank"
+                            class="text-gray-700 transition hover:text-gray-700/75"
+                          >
+                            <span class="sr-only">Instagram</span>
+                            <svg
+                              class="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a
+                            href="/"
+                            rel="noreferrer"
+                            target="_blank"
+                            class="text-gray-700 transition hover:text-gray-700/75"
+                          >
+                            <span class="sr-only">Twitter</span>
+                            <svg
+                              class="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a
+                            href="/"
+                            rel="noreferrer"
+                            target="_blank"
+                            class="text-gray-700 transition hover:text-gray-700/75"
+                          >
+                            <span class="sr-only">GitHub</span>
+                            <svg
+                              class="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                  
+                        <li>
+                          <a
+                            href="/"
+                            rel="noreferrer"
+                            target="_blank"
+                            class="text-gray-700 transition hover:text-gray-700/75"
+                          >
+                            <span class="sr-only">Dribbble</span>
+                            <svg
+                              class="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </footer>
+            </html>
